@@ -43,6 +43,7 @@ export default class Headbar extends Vue {
   safeExit() {
     window.location.href = "/login";
     localStorage.removeItem("vuexData");
+    sessionStorage.removeItem("token");
     localStorage.setItem("DEALER_ID", LoginModule.getUserInfo.dealerId);
   }
 }

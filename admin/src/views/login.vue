@@ -110,6 +110,13 @@ export default class Login extends Vue {
     password: [{ required: true, message: "请输入密码", trigger: "blur" }]
   };
 
+  created() {
+    if (window.sessionStorage.getItem("token")) {
+      location.href = "/home_manage/index";
+      return false;
+    }
+  }
+
   beforeDestroy() {
     clearInterval(codeTimeHandle);
     codeTimeHandle = -1;

@@ -46,7 +46,11 @@ router.beforeEach((to: Route, from: Route, next: any) => {
     document.title = to.meta.title;
   }
   // 如果前进的页面不是登录页面并且不存在token  则直接进入登录页
-  if (to.path !== "/login" && to.path !== "*" && !window.sessionStorage.getItem("token")) {
+  if (
+    to.path !== "/login" &&
+    to.path !== "*" &&
+    !window.sessionStorage.getItem("token")
+  ) {
     location.href = "/login";
   }
   next();
