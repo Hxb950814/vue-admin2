@@ -1,0 +1,18 @@
+/* 小于1000px */
+@media screen and (max-width: 1000px){
+    /*登录页面*/
+    #app .login-block{
+        width: 500px;
+        .show-pic{
+            display: none;
+        }
+        .input-section{
+            margin: 0 auto;
+        }
+    }
+
+    /* 顶部欢迎文字 */
+    .welcome-text{
+        display: none;
+    }
+}

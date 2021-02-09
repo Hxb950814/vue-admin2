@@ -1,0 +1,124 @@
+@import "./variables";
+
+* {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: 1.2;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p,span,h1,h2,h3,h4,h5,h6{
+    color: $base-font-color;
+}
+
+// 去除input[type=number]的默认样式
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+:after, :before {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #fff;
+}
+
+body {
+    background-color: $common-bg;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
+}
+
+body, p {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    display: block;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top
+}
+
+a img {
+    border: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+}
+
+/*input:focus,textarea:focus{outline:0;}*/
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+ul {
+    list-style-type: none;
+    -webkit-list-style-position: inside;
+    -moz-list-style-position: inside;
+    -ms-list-style-position: inside;
+    -o-list-style-position: inside;
+}
+
+li {
+    list-style-type: none;
+}
+
+// 解决全部覆盖不了的样式 || 全局影响局部的样式  -------> Hxb
+.hbb {
+    .el-date-editor{
+        .el-range-separator{
+            width:auto !important;
+        }
+    }
+}
+
+.hbb-left-menu-popper{
+    .el-menu--popup{
+        border-radius: 5px;
+        .el-menu-item-group__title{
+            padding: 0;
+        }
+        .el-menu-item{
+            span{
+                color: #fff;
+            }
+            &:hover{
+                background: #587ADD;
+            }
+            &.active{
+                background-color: #587ADD;
+            }
+        }
+    }
+}
+// 菜单栏弹层
